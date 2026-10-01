@@ -1,0 +1,21 @@
+{
+  "id": "unrecovered-error",
+  "title": "Lỗi không được phục hồi",
+  "description": "Tool lỗi và agent bỏ cuộc, không thử lại hay đổi hướng.",
+  "expect_layer": "recovery",
+  "spec": {
+    "name": "unrecovered-error",
+    "recovery": {}
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "book",
+      "args": {
+        "slot": "x"
+      },
+      "result": null,
+      "error": "timeout"
+    }
+  ]
+}

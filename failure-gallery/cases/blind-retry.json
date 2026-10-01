@@ -1,0 +1,29 @@
+{
+  "id": "blind-retry",
+  "title": "Retry mù sau lỗi",
+  "description": "Sau lỗi 400 agent gọi lại y hệt thay vì sửa tham số.",
+  "expect_layer": "recovery",
+  "spec": {
+    "name": "blind-retry",
+    "recovery": {}
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "book",
+      "args": {
+        "slot": "x"
+      },
+      "result": null,
+      "error": "400"
+    },
+    {
+      "step": 2,
+      "tool": "book",
+      "args": {
+        "slot": "x"
+      },
+      "result": "ok"
+    }
+  ]
+}

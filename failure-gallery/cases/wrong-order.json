@@ -1,0 +1,29 @@
+{
+  "id": "wrong-order",
+  "title": "Sai thứ tự",
+  "description": "Thực hiện hành động trước khi kiểm tra.",
+  "expect_layer": "selection",
+  "spec": {
+    "name": "wrong-order",
+    "selection": {
+      "order": [
+        "check_stock",
+        "place_order"
+      ]
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "place_order",
+      "args": {},
+      "result": "ok"
+    },
+    {
+      "step": 2,
+      "tool": "check_stock",
+      "args": {},
+      "result": "5"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "repeat-same-call",
+  "title": "Lặp y hệt một lời gọi",
+  "description": "Agent gọi lại đúng lời gọi cũ dù kết quả không đổi (kể cả khác khoảng trắng/thứ tự khóa).",
+  "expect_layer": "loop",
+  "spec": {
+    "name": "repeat-same-call",
+    "loop": {}
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "search",
+      "args": {
+        "q": "vé  HAN"
+      },
+      "result": []
+    },
+    {
+      "step": 2,
+      "tool": "search",
+      "args": {
+        "q": "vé HAN"
+      },
+      "result": []
+    },
+    {
+      "step": 3,
+      "tool": "search",
+      "args": {
+        "q": " vé HAN "
+      },
+      "result": []
+    }
+  ]
+}

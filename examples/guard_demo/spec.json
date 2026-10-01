@@ -1,0 +1,7 @@
+{
+  "name": "agent-that-bi-chan",
+  "selection": {"must_call": ["search_flights"]},
+  "schema": {"tools": {"search_flights": {"required": ["date"], "properties": {"date": {"type": "string", "format": "iso-date"}}}}},
+  "loop": {"max_repeat_same_call": 3},
+  "recovery": {}
+}

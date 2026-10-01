@@ -1,0 +1,29 @@
+{
+  "id": "missing-required",
+  "title": "Thiếu tham số bắt buộc",
+  "description": "Lời gọi bỏ sót tham số required.",
+  "expect_layer": "schema",
+  "spec": {
+    "name": "missing-required",
+    "schema": {
+      "tools": {
+        "send": {
+          "required": [
+            "to",
+            "body"
+          ]
+        }
+      }
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "send",
+      "args": {
+        "to": "a@x.vn"
+      },
+      "result": "ok"
+    }
+  ]
+}

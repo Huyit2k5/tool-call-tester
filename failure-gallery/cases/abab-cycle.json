@@ -1,0 +1,39 @@
+{
+  "id": "abab-cycle",
+  "title": "Chu kỳ A→B→A→B",
+  "description": "Hai tool gọi luân phiên mà không tiến triển.",
+  "expect_layer": "loop",
+  "spec": {
+    "name": "abab-cycle",
+    "loop": {
+      "max_repeat_same_call": 99,
+      "max_no_progress": 99
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "a",
+      "args": {},
+      "result": 1
+    },
+    {
+      "step": 2,
+      "tool": "b",
+      "args": {},
+      "result": 2
+    },
+    {
+      "step": 3,
+      "tool": "a",
+      "args": {},
+      "result": 1
+    },
+    {
+      "step": 4,
+      "tool": "b",
+      "args": {},
+      "result": 2
+    }
+  ]
+}

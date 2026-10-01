@@ -1,0 +1,4 @@
+{
+  "name": "plugin-demo",
+  "checks": {"search_hygiene": {"max_calls_per_tool": 2}}
+}

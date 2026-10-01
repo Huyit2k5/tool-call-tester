@@ -1,0 +1,22 @@
+{
+  "id": "missing-required-call",
+  "title": "Quên gọi tool bắt buộc",
+  "description": "Agent trả lời mà không hề xác minh bằng tool.",
+  "expect_layer": "selection",
+  "spec": {
+    "name": "missing-required-call",
+    "selection": {
+      "must_call": [
+        "verify_payment"
+      ]
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "lookup",
+      "args": {},
+      "result": "x"
+    }
+  ]
+}

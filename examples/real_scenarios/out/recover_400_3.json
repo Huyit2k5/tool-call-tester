@@ -1,0 +1,81 @@
+[
+ {
+  "role": "user",
+  "content": "Dời cuộc họp sprint sang 14:00 ngày 2026-10-03."
+ },
+ {
+  "role": "assistant",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-a92729afcb7b0b36",
+    "function": {
+     "arguments": "{\"query\": \"sprint\"}",
+     "name": "find_meeting"
+    },
+    "type": "function",
+    "index": 0
+   }
+  ],
+  "reasoning": "The user wants to reschedule a sprint meeting to 14:00 on 2026-10-03. I need to first find the meeting by searching for it, then reschedule it. Let me first search for the sprint meeting.\n",
+  "reasoning_details": [
+   {
+    "index": 0,
+    "type": "reasoning.text",
+    "text": "The user wants to reschedule a sprint meeting to 14:00 on 2026-10-03. I need to first find the meeting by searching for it, then reschedule it. Let me first search for the sprint meeting.\n"
+   }
+  ],
+  "usage": {
+   "total_tokens": 487
+  }
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "chatcmpl-tool-a92729afcb7b0b36",
+  "content": "{\"id\": \"m42\", \"title\": \"Họp sprint\"}"
+ },
+ {
+  "role": "assistant",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-affe4acb2082a6a4",
+    "function": {
+     "arguments": "{\"meeting_id\": \"m42\", \"slot\": \"2026-10-03T14:00:00\"}",
+     "name": "reschedule_meeting"
+    },
+    "type": "function",
+    "index": 0
+   }
+  ],
+  "reasoning": "Found the meeting with id \"m42\". Now I need to reschedule it to 14:00 on 2026-10-03. The slot should be in ISO 8601 format.\n",
+  "reasoning_details": [
+   {
+    "index": 0,
+    "type": "reasoning.text",
+    "text": "Found the meeting with id \"m42\". Now I need to reschedule it to 14:00 on 2026-10-03. The slot should be in ISO 8601 format.\n"
+   }
+  ],
+  "usage": {
+   "total_tokens": 633
+  }
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "chatcmpl-tool-affe4acb2082a6a4",
+  "content": "{\"error\": \"400 Bad Request: khung giờ này đã có người đặt, hãy chọn giờ khác\"}"
+ },
+ {
+  "content": "\n\nKhông thể dời cuộc họp **\"Họp sprint\"** sang 14:00 ngày 2026-10-03 vì khung giờ này đã bị đặt rồi. Bạn có muốn chọn giờ khác không?",
+  "role": "assistant",
+  "reasoning": "The rescheduling failed because that time slot is already taken. I should inform the user about this and ask them to choose a different time.\n",
+  "reasoning_details": [
+   {
+    "index": 0,
+    "type": "reasoning.text",
+    "text": "The rescheduling failed because that time slot is already taken. I should inform the user about this and ask them to choose a different time.\n"
+   }
+  ],
+  "usage": {
+   "total_tokens": 750
+  }
+ }
+]

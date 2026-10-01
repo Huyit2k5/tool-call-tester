@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: toolcheck
+Version: 0.1.0
+Summary: pytest cho tool-call của agent: offline, bắt lỗi chọn tool, sai tham số, vòng lặp vô hạn.
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file

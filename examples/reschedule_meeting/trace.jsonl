@@ -1,0 +1,4 @@
+{"step": 1, "tool": "find_meeting", "args": {"query": "họp sprint"}, "result": {"id": "m42", "title": "họp sprint", "slot": "2026-10-02T09:00:00"}, "error": null, "ts": 1790764430.3098178, "tokens": 300}
+{"step": 2, "tool": "find_slot", "args": {"day": "2026-10-03"}, "result": {"slots": ["2026-10-03T09:00:00", "2026-10-03T14:00:00"]}, "error": null, "ts": 1790764430.3098254, "tokens": 300}
+{"step": 3, "tool": "reschedule_meeting", "args": {"meeting_id": "m42", "slot": "2026-10-03T09:00:00"}, "result": null, "error": "400", "ts": 1790764430.3098316, "tokens": 400}
+{"step": 4, "tool": "reschedule_meeting", "args": {"meeting_id": "m42", "slot": "2026-10-03T14:00:00"}, "result": {"ok": true}, "error": null, "ts": 1790764430.309837, "tokens": 400}

@@ -1,0 +1,6 @@
+{"step": 1, "tool": "find_slot", "args": {"day": "2026-10-02"}, "result": {"slot": "2026-10-02T09:00:00"}, "tokens": 400}
+{"step": 2, "tool": "book_meeting", "args": {"slot": "2026-10-02T09:00:00", "attendees": ["a@x.vn"]}, "result": {"id": "m1", "status": "pending"}, "tokens": 500}
+{"step": 3, "tool": "check_status", "args": {"id": "m1"}, "result": {"status": "pending"}, "tokens": 100}
+{"step": 4, "tool": "check_status", "args": {"id": "m1"}, "result": {"status": "pending"}, "tokens": 100}
+{"step": 5, "tool": "check_status", "args": {"id": "m1"}, "result": {"status": "pending"}, "tokens": 100}
+{"step": 6, "tool": "check_status", "args": {"id": "m1"}, "result": {"status": "confirmed"}, "tokens": 100}

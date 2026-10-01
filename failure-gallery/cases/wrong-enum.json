@@ -1,0 +1,33 @@
+{
+  "id": "wrong-enum",
+  "title": "Giá trị ngoài enum",
+  "description": "Tham số không thuộc tập giá trị cho phép.",
+  "expect_layer": "schema",
+  "spec": {
+    "name": "wrong-enum",
+    "schema": {
+      "tools": {
+        "set_priority": {
+          "properties": {
+            "level": {
+              "enum": [
+                "low",
+                "high"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "set_priority",
+      "args": {
+        "level": "urgent"
+      },
+      "result": "ok"
+    }
+  ]
+}

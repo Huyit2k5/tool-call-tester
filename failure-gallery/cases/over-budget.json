@@ -1,0 +1,65 @@
+{
+  "id": "over-budget",
+  "title": "Vượt ngân sách",
+  "description": "Quá nhiều bước/token cho một việc đơn giản.",
+  "expect_layer": "budget",
+  "spec": {
+    "name": "over-budget",
+    "budget": {
+      "max_steps": 3,
+      "max_tokens": 1000
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "t",
+      "args": {
+        "i": 0
+      },
+      "result": 0,
+      "error": null,
+      "tokens": 400
+    },
+    {
+      "step": 2,
+      "tool": "t",
+      "args": {
+        "i": 1
+      },
+      "result": 1,
+      "error": null,
+      "tokens": 400
+    },
+    {
+      "step": 3,
+      "tool": "t",
+      "args": {
+        "i": 2
+      },
+      "result": 2,
+      "error": null,
+      "tokens": 400
+    },
+    {
+      "step": 4,
+      "tool": "t",
+      "args": {
+        "i": 3
+      },
+      "result": 3,
+      "error": null,
+      "tokens": 400
+    },
+    {
+      "step": 5,
+      "tool": "t",
+      "args": {
+        "i": 4
+      },
+      "result": 4,
+      "error": null,
+      "tokens": 400
+    }
+  ]
+}

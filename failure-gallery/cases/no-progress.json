@@ -1,0 +1,36 @@
+{
+  "id": "no-progress",
+  "title": "Không tiến triển",
+  "description": "Tham số khác nhau nhưng kết quả giống hệt nhiều bước liền.",
+  "expect_layer": "loop",
+  "spec": {
+    "name": "no-progress",
+    "loop": {}
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "s",
+      "args": {
+        "p": 1
+      },
+      "result": "empty"
+    },
+    {
+      "step": 2,
+      "tool": "s",
+      "args": {
+        "p": 2
+      },
+      "result": "empty"
+    },
+    {
+      "step": 3,
+      "tool": "s",
+      "args": {
+        "p": 3
+      },
+      "result": "empty"
+    }
+  ]
+}

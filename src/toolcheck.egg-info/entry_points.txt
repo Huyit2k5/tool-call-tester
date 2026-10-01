@@ -1,0 +1,2 @@
+[console_scripts]
+toolcheck = toolcheck.cli:main

@@ -1,0 +1,83 @@
+[
+ {
+  "role": "user",
+  "content": "Hủy chuyến bay đi Đà Nẵng của tôi."
+ },
+ {
+  "content": "Tôi sẽ kiểm tra danh sách booking của bạn để tìm chuyến bay đi Đà Nẵng.",
+  "role": "assistant",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-970ed2d747b1ce19",
+    "function": {
+     "arguments": "{}",
+     "name": "list_bookings"
+    },
+    "type": "function",
+    "index": 0
+   }
+  ],
+  "reasoning": "The user wants to cancel their flight booking to Đà Nẵng. I need to first list their bookings to find the one going to Đà Nẵng, then cancel it. Let me start by listing the bookings.\n",
+  "reasoning_details": [
+   {
+    "index": 0,
+    "type": "reasoning.text",
+    "text": "The user wants to cancel their flight booking to Đà Nẵng. I need to first list their bookings to find the one going to Đà Nẵng, then cancel it. Let me start by listing the bookings.\n"
+   }
+  ],
+  "usage": {
+   "total_tokens": 428
+  }
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "chatcmpl-tool-970ed2d747b1ce19",
+  "content": "[{\"booking_id\": \"BK-1029\", \"dest\": \"SGN\"}, {\"booking_id\": \"BK-2210\", \"dest\": \"DAD\"}]"
+ },
+ {
+  "content": "Tôi tìm thấy chuyến bay đi Đà Nẵng (mã DAD) của bạn với booking ID **BK-2210**. Tôi sẽ tiến hành hủy ngay.",
+  "role": "assistant",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-bbc994f1fe7e11b8",
+    "function": {
+     "arguments": "{\"booking_id\": \"BK-2210\"}",
+     "name": "cancel_booking"
+    },
+    "type": "function",
+    "index": 0
+   }
+  ],
+  "reasoning": "The user wants to cancel their flight to Đà Nẵng. Looking at the bookings:\n- BK-1029: dest SGN (Sài Gòn/HCMC)\n- BK-2210: dest DAD (Đà Nẵng)\n\nSo I need to cancel booking BK-2210.\n",
+  "reasoning_details": [
+   {
+    "index": 0,
+    "type": "reasoning.text",
+    "text": "The user wants to cancel their flight to Đà Nẵng. Looking at the bookings:\n- BK-1029: dest SGN (Sài Gòn/HCMC)\n- BK-2210: dest DAD (Đà Nẵng)\n\nSo I need to cancel booking BK-2210.\n"
+   }
+  ],
+  "usage": {
+   "total_tokens": 621
+  }
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "chatcmpl-tool-bbc994f1fe7e11b8",
+  "content": "{\"cancelled\": \"BK-2210\"}"
+ },
+ {
+  "content": "\n\n✅ Đã hủy thành công booking **BK-2210** – chuyến bay đi Đà Nẵng của bạn.\n\nNếu cần hỗ trợ thêm, bạn cứ cho tôi biết nhé!",
+  "role": "assistant",
+  "reasoning": "The booking has been successfully cancelled. I'll inform the user.\n",
+  "reasoning_details": [
+   {
+    "index": 0,
+    "type": "reasoning.text",
+    "text": "The booking has been successfully cancelled. I'll inform the user.\n"
+   }
+  ],
+  "usage": {
+   "total_tokens": 701
+  }
+ }
+]

@@ -1,0 +1,2 @@
+{"step": 1, "tool": "book_meeting", "args": {"slot": "ngày mai 9h", "room": "Z"}, "result": null, "error": "400"}
+{"step": 2, "tool": "delete_meeting", "args": {"id": "m1"}, "result": {"ok": true}}

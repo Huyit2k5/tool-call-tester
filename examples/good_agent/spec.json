@@ -1,0 +1,14 @@
+{
+  "name": "dat-lich-hop",
+  "selection": {"must_call": ["find_slot", "book_meeting"], "must_not_call": ["delete_meeting"], "order": ["find_slot", "book_meeting"]},
+  "schema": {
+    "tools": {
+      "book_meeting": {
+        "required": ["slot", "attendees"],
+        "properties": {"slot": {"type": "string", "format": "iso-datetime"}, "attendees": {"type": "array"}}
+      }
+    }
+  },
+  "loop": {"allow_polling": ["check_status"]},
+  "budget": {"max_steps": 8, "max_tokens": 5000}
+}

@@ -1,0 +1,11 @@
+{
+  "name": "doi-lich-hop-semantic",
+  "checks": {
+    "semantic_args": {
+      "task": "Dời cuộc họp sprint sang ngày 2026-10-03",
+      "rules": [
+        {"tool": "reschedule_meeting", "criterion": "meeting_id phải là id của cuộc họp sprint lấy từ kết quả find_meeting, không được tự đặt"}
+      ]
+    }
+  }
+}

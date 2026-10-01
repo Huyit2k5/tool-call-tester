@@ -1,0 +1,24 @@
+{
+  "name": "doi-lich-hop",
+  "selection": {
+    "must_call": ["find_meeting", "reschedule_meeting"],
+    "must_not_call": ["delete_meeting"],
+    "order": ["find_meeting", "reschedule_meeting"]
+  },
+  "schema": {
+    "tools": {
+      "reschedule_meeting": {
+        "required": ["meeting_id", "slot"],
+        "properties": {"slot": {"type": "string", "format": "iso-datetime"}}
+      }
+    }
+  },
+  "provenance": {
+    "inputs": ["họp sprint", "2026-10-03"],
+    "rules": [{"tool": "reschedule_meeting", "arg": "meeting_id", "from_result_of": "find_meeting"}]
+  },
+  "loop": {},
+  "recovery": {},
+  "budget": {"max_steps": 6, "max_tokens": 3000},
+  "final_state": {"equals": {"meetings": {"m42": {"slot": "2026-10-03T14:00:00"}}}}
+}

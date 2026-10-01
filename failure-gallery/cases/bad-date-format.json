@@ -1,0 +1,31 @@
+{
+  "id": "bad-date-format",
+  "title": "Sai định dạng ngày",
+  "description": "Agent truyền ngôn ngữ tự nhiên thay vì ISO.",
+  "expect_layer": "schema",
+  "spec": {
+    "name": "bad-date-format",
+    "schema": {
+      "tools": {
+        "book": {
+          "properties": {
+            "date": {
+              "type": "string",
+              "format": "iso-date"
+            }
+          }
+        }
+      }
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "tool": "book",
+      "args": {
+        "date": "ngày mai"
+      },
+      "result": "ok"
+    }
+  ]
+}
